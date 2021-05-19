@@ -6,10 +6,61 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 50px 0px;
+
 }
 
 .canvas{
-    width:700px;
-    height:700px;
+    width: 700px;
+    height: 700px;
     background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.controls{
+    margin-top: 80px; /* 위쪽 마진 */
+    display: flex;
+    flex-direction: column; /* controls의 flex들은 세로로 배치 */
+    align-items: center;
+}
+
+.controls .controls__btns{
+    margin-bottom: 30px;
+}
+
+.controls__btns button {
+    all: unset;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 0px;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px; /* 외곽선 부드럽게 만들기 */
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border:2px solid rgba(0,0,0,0.2); /* 외곽선 */
+    color:rgba(0,0,0,0.8); /* 글씨색 */
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.controls__btns button:active{ /* 클릭하면 0.98만큼 줄어듦! 클릭시 액션 넣는 css! */
+    transform: scale(0.98);
+}
+
+.controls .controls__colors{
+    display: flex; /* 내용물의 가로길이만큼 점유, 가로방향으로 배치 */
+}
+
+.controls__colors .controls__color{
+    width:50px;
+    height:50px;
+    border-radius: 25px; /* 원형으로 만들기 */
+    cursor: pointer; /* 마우스 커서를 가져다대면 커서를 포인터형태로 바꿔줌 */
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.controls .controls__range{
+    margin-bottom:30px;
 }
