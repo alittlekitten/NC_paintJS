@@ -12,11 +12,11 @@
 
 <body>
     <!-- JS를 편집할 때는 ID를 사용하고, css를 편집할 때는 cls를 사용할 예정  -->
-    <canvas id="jsCanvas" class="canvas" width="700px" height="700px"></canvas> <!-- clas 아닌 id를 사용해도 같다! -->
+    <canvas id="jsCanvas" class="canvas"></canvas> <!-- clas 아닌 id를 사용해도 같다! -->
     <div class="controls">
         <div class="controls__range"> <!-- range 바 생성 --> 
             <!-- 0.1 간격으로 조정 가능하고, 최대 0.1부터 5까지 조정 가능, 초기값 2.5 -->
-            <input type="range" id="jsRang" min="0.1" max="5" value="2.5" step="0.1"/>
+            <input type="range" id="jsRange" min="0.1" max="5" value="2.5" step="0.1"/>
         </div>
         <!-- 아래 div 생성 단축 명령어 div.controls__btns>button#jsMode+button#jsSave -->
         <!-- Fill, Save 버튼 생성 (Fill 클릭하면 Painting, 다시 클릭하면 Fill) -->
@@ -26,15 +26,15 @@
         </div>
         <div class="controls__colors" id="jsColors"><!-- div를 한번에 여러개 생성할 때 div.class명*개수 엔터를 누르면 여러개 생성이 가능하다! -->
             <!-- 다중 커서 - 여러 줄 선택하는 방법은 ctrl+alt를 누른 채로 방향키를 눌러 영역을 선택합니다. -->
-            <div class="controls__color" style="background-color:black"></div>
-            <div class="controls__color" style="background-color:white"></div>
-            <div class="controls__color" style="background-color:red"></div>
-            <div class="controls__color" style="background-color:orange"></div>
-            <div class="controls__color" style="background-color:yellow"></div>
-            <div class="controls__color" style="background-color:green"></div>
-            <div class="controls__color" style="background-color:skyblue"></div>
-            <div class="controls__color" style="background-color:blue"></div>
-            <div class="controls__color" style="background-color:violet"></div>
+            <div class="controls__color jsColor" style="background-color:black"></div>
+            <div class="controls__color jsColor" style="background-color:white"></div>
+            <div class="controls__color jsColor" style="background-color:red"></div>
+            <div class="controls__color jsColor" style="background-color:orange"></div>
+            <div class="controls__color jsColor" style="background-color:yellow"></div>
+            <div class="controls__color jsColor" style="background-color:green"></div>
+            <div class="controls__color jsColor" style="background-color:skyblue"></div>
+            <div class="controls__color jsColor" style="background-color:blue"></div>
+            <div class="controls__color jsColor" style="background-color:purple"></div>
         </div>
     </div>
     <script src="app.js"></script> <!-- app.js 연결 -->
